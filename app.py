@@ -3,7 +3,7 @@ import streamlit as st
 
 st.title("Gen-AI ChatBot")
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 
