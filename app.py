@@ -3,8 +3,8 @@ import streamlit as st
 
 st.title("Gen-AI ChatBot")
 
-openai.api_key = "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"
 
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 
 
