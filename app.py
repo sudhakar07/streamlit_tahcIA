@@ -21,11 +21,12 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 name = st.text_input("Enter your name (required)")
 
-if name=="Hi":
-  st.warning("Please fill out so required fields")
+#if name=="Hi":
+  #st.warning("Please fill out so required fields")
 
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt-3.5-turbo"
+    if name=="Hi":
+          st.session_state["openai_model"] = "gpt-3.5-turbo"
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
