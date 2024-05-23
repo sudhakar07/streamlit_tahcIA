@@ -4,7 +4,7 @@ import streamlit as st
 st.title("Gen-AI ChatBot")
 
 
-openai.api_key = ""
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 api_key_secrectpass = st.secrets["OPENAI_API_PASS"]
 
 hide_st_style = """
