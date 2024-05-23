@@ -5,6 +5,7 @@ st.title("Gen-AI ChatBot")
 
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
+#api_key_secrectpass = st.secrets["OPENAI_API_PASS"]
 
 hide_st_style = """
             <style>
@@ -18,7 +19,10 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+name = st.text_input("Enter your name (required)")
 
+if name=="Hi":
+  st.warning("Please fill out so required fields")
 
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo"
