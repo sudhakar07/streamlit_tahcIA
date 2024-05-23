@@ -20,6 +20,8 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 name = st.text_input("Enter your SecretPass (required)", type="password")
+st.warning(name)
+st.warning(api_key_secrectpass)
 
 #if name=="Hi":
   #st.warning("Please fill out so required fields")
