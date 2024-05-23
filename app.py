@@ -26,9 +26,12 @@ st.warning(api_key_secrectpass)
 #if name=="Hi":
   #st.warning("Please fill out so required fields")
 
-if "openai_model" not in st.session_state:
-    openai.api_key = st.secrets["OPENAI_API_KEY"]
-    st.session_state["openai_model"] = "gpt-3.5-turbo"
+if name == api_key_secrectpass:
+   if "openai_model" not in st.session_state:
+       openai.api_key = st.secrets["OPENAI_API_KEY"]
+       st.session_state["openai_model"] = "gpt-3.5-turbo"
+
+
     
 if "messages" not in st.session_state:
     st.session_state.messages = []
